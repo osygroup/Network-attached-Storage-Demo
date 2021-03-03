@@ -55,6 +55,8 @@ Code Repository: GitHub
 
 ![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image1.png)
 
+
+
 Step 1: Prepare the NFS server
 
 Create a RHEL Linux 7 VM that will serve as the NFS server named
@@ -333,6 +335,8 @@ Run the following to disable Firewalld if it is enabled:
 
 *\$ sudo systemctl mask \--now firewalld*
 
+
+
 Step 2: Configure the database server
 
 Create an Ubuntu 20.04 VM that will serve as the database server named
@@ -481,6 +485,8 @@ Confirm the status of the MySQL server
 *\$sudo systemctl status mysql*
 
 ![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image32.png)
+
+
 
 Step 3: Prepare the Web Server(s)
 
@@ -736,6 +742,8 @@ generate the hashed password so as to hide a password in a table e.g.
 
 -\> \'ae2b1fca515949e5d54fb22b8ed95575\'
 
+
+
 Conclusion
 
 NAS is useful for more than just general centralized storage provided to
@@ -751,6 +759,8 @@ flexible network-based storage to the home consumer market for little
 more than the cost of a regular USB or FireWire external hard disk. Many
 of these home consumer devices are built around ARM, x86 or MIPS
 processors running an embedded Linux operating system.
+
+
 
 Credits
 
