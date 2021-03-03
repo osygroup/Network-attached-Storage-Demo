@@ -59,10 +59,7 @@ Step 1: Prepare the NFS server
 Create a RHEL Linux 7 VM that will serve as the NFS server named
 *NFS-Server*. Create 2 volumes (disks) for the VM of the same size.
 
-![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\disk.JPG](test\media\image2.jpeg){width="5.520833333333333in"
-height="2.25in"}
-
+![https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image2.png]
 SSH to the VM after creation (using Putty in a Windows OS).
 
 Use *lsblk* command to inspect what block devices (disks) are attached
