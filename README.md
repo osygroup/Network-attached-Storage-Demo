@@ -652,7 +652,7 @@ the user, and 'tooling' is the database that the user 'webaccess' has
 full permissions in. This will set the database credentials to be used
 when connecting to the tooling database.
 
-Back to the *tooling* directory cloned from the Github repository, there
+Back to the *tooling* directory cloned from the Github repository in the web server, there
 is a file *tooling-db.sql*. This is a backup of a database table that
 would be needed for the tooling website, and a user account that will be
 able to login to the tooling website. Users created in the tooling
@@ -710,8 +710,7 @@ The above instructions are for setting up a webserver for the tooling
 app. To add subsequent webservers, just create the webservers with the
 same instructions, but skip the part of cloning the tooling website
 repository to the server and copying the html directory into /var/www/.
-Also skip creating an index.html page. Once the mount is successful,
-these contents will be automatically copied from the NFS-Server.
+/var/www/. Once the mount is successful, these contents will be automatically copied from the NFS-Server. Also skip creating an index.html page, editing the /mnt/apps/functions.php file in the NFS server and dumping the tooling-db.sql table in the MySQL server. 
 
 If 'Forbidden' permission error is encountered when visiting the index
 page or the tooling website on a new webserver:
@@ -730,7 +729,7 @@ files:
 The above command will modify any working SELinux policy behaviour to
 allow apache (httpd) to use nfs files, etc.
 
-Kindly note that SSH into the webservers is not possible if the
+Kindly note that SSH into the webservers may not be possible if the
 NFS-Server is not running. Also, the tooling website will be offline
 until the NFS-Server is running.
 
