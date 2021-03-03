@@ -183,7 +183,7 @@ Create /mnt/apps directory to be used by the webserver(s), create
 /mnt/logs directory to be used by the webserver(s) logs, and create
 /mnt/opt directory to be used by Jenkins server.
 
-NOTE: /mnt directory is mounted to ephemeral storage in Azure RHEL 8.
+NOTE: /mnt directory is mounted to ephemeral storage in Azure RHEL 8 (seen in the image below).
 After reboot or instance stop/start, all data is lost. It is advised to
 create a new mount directory for the apps, logs and opt directories and
 not use an ephemeral storage like /mnt. See
