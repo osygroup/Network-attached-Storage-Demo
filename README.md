@@ -57,7 +57,7 @@ Code Repository: GitHub
 
 
 
-Step 1: Prepare the NFS server
+# Step 1: Prepare the NFS server
 
 Create a RHEL Linux 7 VM that will serve as the NFS server named
 *NFS-Server*. Create 2 volumes (disks) for the VM of the same size.
@@ -337,7 +337,7 @@ Run the following to disable Firewalld if it is enabled:
 
 
 
-Step 2: Configure the database server
+# Step 2: Configure the database server
 
 Create an Ubuntu 20.04 VM that will serve as the database server named
 *MySQL-Server*. MySQL Server is to be installed in the server. Run the
@@ -488,7 +488,7 @@ Confirm the status of the MySQL server
 
 
 
-Step 3: Prepare the Web Server(s)
+# Step 3: Prepare the Web Server(s)
 
 One or more Web Server VMs can be created and pointed to the same NFS
 server and also connect to the same Database Server with the following
@@ -744,7 +744,7 @@ generate the hashed password so as to hide a password in a table e.g.
 
 
 
-Conclusion
+# Conclusion
 
 NAS is useful for more than just general centralized storage provided to
 client computers in environments with large amounts of data. NAS can
@@ -762,7 +762,7 @@ processors running an embedded Linux operating system.
 
 
 
-Credits
+# Credits
 
 <https://en.wikipedia.org/wiki/Network-attached_storage>
 
