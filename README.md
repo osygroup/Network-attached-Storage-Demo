@@ -634,7 +634,7 @@ Run the following to disable Firewalld if it is enabled:
 To ensure that the apache server can now serve content on the web
 server, simply create an index.html page with any chosen content within;
 
-sudo bash -c \"echo hello \>\> /var/www/html/index.html\"
+*\$ sudo bash -c \"echo hello \>\> /var/www/html/index.html\"*
 
 Head over to a web browser and type in the IP address of the web server
 to verify.
