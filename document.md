@@ -68,8 +68,7 @@ Linux reside in /dev/ directory. Inspect it with ls /dev/ and make sure
 all 2 newly created block devices are seen there
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\lsblk1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image3.jpeg){width="4.091846019247594in"
-height="2.7083333333333335in"}
+7\\lsblk1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image3.jpeg)
 
 Use *df -h* command to see all mounts and free space on the server
 
@@ -85,16 +84,14 @@ and follow the prompt:
 *\$ sudo gdisk /dev/sdc*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\gpt1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image5.jpeg){width="4.672327209098863in"
-height="3.6770833333333335in"}
+7\\gpt1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image5.jpeg)
 
 Create a partition on the other disk i.e. /dev/sdd in the same way
 
 Use *lsblk* to view the newly configured partition on the 2 disks
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\lsblk2.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image6.jpeg){width="3.7058825459317584in"
-height="2.7708333333333335in"}
+7\\lsblk2.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image6.jpeg)
 
 From the partition created for each disk, create a Physical Volume (PV).
 
@@ -104,16 +101,14 @@ Use *pvcreate* utility to mark each of the disks as physical volumes
 *\$ sudo pvcreate /dev/sdc1 /dev/sdd1*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\pv1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image7.jpeg){width="5.135416666666667in"
-height="0.6979166666666666in"}
+7\\pv1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image7.jpeg)
 
 Run *sudo pvdisplay* to view the info about the created PVs.
 
 Run *sudo pvs* to view the PVs summary.
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\pvs.JPG](test\media\image8.jpeg){width="4.072916666666667in"
-height="1.0208333333333333in"}
+7\\pvs.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image8.jpeg)
 
 Physical volumes are combined into volume groups (VGs). It creates a
 pool of disk space out of which logical volumes can be allocated.
@@ -124,8 +119,7 @@ VG *nfsdata-vg*
 *\$ sudo vgcreate nfsdata-vg /dev/sdc1 /dev/sdd1*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\vg1.JPG](test\media\image9.jpeg){width="5.96875in"
-height="0.5520833333333334in"}
+7\\vg1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image9.jpeg)
 
 Run *sudo vgdisplay* to view the info about the created VG.
 
@@ -135,8 +129,7 @@ Run *sudo vgdisplay --v* to view all info about a VG including the PVs
 and LVs of a VG.
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\vgs.JPG](test\media\image10.jpeg){width="4.083333333333333in"
-height="0.84375in"}
+7\\vgs.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image10.jpeg)
 
 Use *lvcreate* utility to create 3 logical volumes: *lv-opt*, *lv-apps*
 and *lv-logs each of 5gb (*VG size is 16gb).
@@ -148,16 +141,14 @@ and *lv-logs each of 5gb (*VG size is 16gb).
 *\$* *sudo lvcreate -n lv-logs -L 5G nfsdata-vg*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\lv1.JPG](test\media\image11.jpeg){width="4.854166666666667in"
-height="1.0350798337707787in"}
+7\\lv1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image11.jpeg)
 
 Run *sudo lvdisplay* to view the info about the created LVs.
 
 Run *sudo lvs* to view the LVs summary.
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\lvs.JPG](test\media\image12.jpeg){width="5.864583333333333in"
-height="1.44in"}
+7\\lvs.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image12.jpeg)
 
 Verify the entire setup
 
@@ -166,8 +157,7 @@ Verify the entire setup
 *\$ sudo lsblk*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\lsblk3.JPG](test\media\image13.jpeg){width="3.875in"
-height="3.040142169728784in"}
+7\\lsblk3.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image13.jpeg)
 
 Use mkfs.xfs (an xfs file system) to format the logical volumes with xfs
 filesystem
@@ -179,8 +169,7 @@ Or
 *\$ sudo mkfs -t xfs /dev/nfsdata-vg/lv-opt*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\xfs.JPG](test\media\image14.jpeg){width="5.395833333333333in"
-height="1.710009842519685in"}
+7\\xfs.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image14.jpeg)
 
 Format *lv-apps and lv-logs* in the same way:
 
@@ -201,8 +190,7 @@ not use an ephemeral storage like /mnt. See
 for more details.
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\mount1.JPG](test\media\image15.jpeg){width="4.25in"
-height="0.925926290463692in"}
+7\\mount1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image15.jpeg)
 
 Mount lv-apps logical volume on /mnt/apps
 
@@ -217,15 +205,13 @@ Mount lv-opt logical volume on /mnt/opt
 *\$ sudo mount /dev/nfsdata-vg/lv-opt /mnt/opt*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\mount2.JPG](test\media\image16.jpeg){width="5.96875in"
-height="0.6979166666666666in"}
+7\\mount2.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image16.jpeg)
 
 Run *df --h* to confirm that the logical volumes were mounted on their
 correct paths
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\mount3.JPG](test\media\image17.jpeg){width="5.1875in"
-height="2.6960761154855644in"}
+7\\mount3.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image17.jpeg)
 
 Note that if the server is restarted, the mount configurations will be
 lost.
@@ -245,8 +231,7 @@ with any editor of choice
 *\$ sudo nano /etc/fstab*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\fstab.JPG](test\media\image18.jpeg){width="5.259523184601925in"
-height="2.9375in"}
+7\\fstab.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image18.jpeg)
 
 Restart the server and run *df -h* to confirm if the mount
 configurations persisted.
@@ -265,8 +250,7 @@ up and running
 *\$ sudo systemctl status nfs-server.service*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\nfs.JPG](test\media\image19.jpeg){width="5.34375in"
-height="1.7336865704286963in"}
+7\\nfs.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image19.jpeg)
 
 Export the mounts for webserver(s)' subnet cidr to connect as clients.
 
@@ -278,8 +262,7 @@ of the NFS-Server, and then click on Subnets pane of the VNET and copy
 the subnet CIDR:
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\subnet.JPG](test\media\image20.jpeg){width="6.072916666666667in"
-height="1.51504593175853in"}
+7\\subnet.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image20.jpeg)
 
 Make sure to set up the permission that will allow the Web server(s) to
 read, write and execute files on NFS:
@@ -299,8 +282,7 @@ read, write and execute files on NFS:
 *\$ sudo systemctl restart nfs-server.service*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\permissions.JPG](test\media\image21.jpeg){width="5.1875in"
-height="1.2233770778652668in"}
+7\\permissions.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image21.jpeg)
 
 Configure access to NFS for clients within the same subnet.
 
@@ -321,8 +303,7 @@ Then run:
 *\$ sudo exportfs -arv*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\export.JPG](test\media\image22.jpeg){width="3.5208333333333335in"
-height="0.8042016622922135in"}
+7\\export.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image22.jpeg)
 
 Check which port is used by NFS and open it using Security Groups (add
 new Inbound Rule)
@@ -330,15 +311,13 @@ new Inbound Rule)
 *\$ rpcinfo -p \| grep nfs*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\grep.JPG](test\media\image23.jpeg){width="3.6770833333333335in"
-height="0.7601202974628172in"}
+7\\grep.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image23.jpeg)
 
 In order for NFS server to be accessible from the webserver(s), open
 following ports in the NSG of the NFS-Server: TCP 111, UDP 111, UDP 2049
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\nsg.JPG](test\media\image24.jpeg){width="4.947571084864392in"
-height="3.1354166666666665in"}
+7\\nsg.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image24.jpeg)
 
 NOTE: Check that there are no other firewalls like UFW or Firewalld
 running in the server. If there is any firewall enabled, ensure that it
@@ -368,8 +347,7 @@ Confirm the MySQL installation:
 
 *\$ mysql -V*
 
-![](test\media\image25.png){width="5.53125in"
-height="0.4895833333333333in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image25.png)
 
 To configure the MySQL installation, it's recommended to run a security
 script that comes pre-installed with MySQL. This script will remove some
@@ -381,7 +359,7 @@ Start the interactive script by running:
 This will ask to configure the VALIDATE PASSWORD PLUGIN. Answer 'y' for
 yes.
 
-![](test\media\image26.png){width="4.5in" height="1.5573775153105862in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image26.png)
 
 The configuration will ask to select a level of password validation.
 Note that if '2' is selected, there will be errors when attempting to
