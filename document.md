@@ -59,7 +59,7 @@ Step 1: Prepare the NFS server
 Create a RHEL Linux 7 VM that will serve as the NFS server named
 *NFS-Server*. Create 2 volumes (disks) for the VM of the same size.
 
-![2](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image2.png)
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image2.jpeg)
 SSH to the VM after creation (using Putty in a Windows OS).
 
 Use *lsblk* command to inspect what block devices (disks) are attached
@@ -74,7 +74,7 @@ height="2.7083333333333335in"}
 Use *df -h* command to see all mounts and free space on the server
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\df1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image4.png)
+7\\df1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image4.jpeg)
 
 Use *gdisk* utility to create a single GPT partition on each of the 3
 disks.
