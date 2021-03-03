@@ -68,7 +68,7 @@ Linux reside in /dev/ directory. Inspect it with ls /dev/ and make sure
 all 2 newly created block devices are seen there
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\lsblk1.JPG](test\media\image3.jpeg){width="4.091846019247594in"
+7\\lsblk1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image3.jpeg){width="4.091846019247594in"
 height="2.7083333333333335in"}
 
 Use *df -h* command to see all mounts and free space on the server
@@ -85,7 +85,7 @@ and follow the prompt:
 *\$ sudo gdisk /dev/sdc*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\gpt1.JPG](test\media\image5.jpeg){width="4.672327209098863in"
+7\\gpt1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image5.jpeg){width="4.672327209098863in"
 height="3.6770833333333335in"}
 
 Create a partition on the other disk i.e. /dev/sdd in the same way
@@ -93,7 +93,7 @@ Create a partition on the other disk i.e. /dev/sdd in the same way
 Use *lsblk* to view the newly configured partition on the 2 disks
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\lsblk2.JPG](test\media\image6.jpeg){width="3.7058825459317584in"
+7\\lsblk2.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image6.jpeg){width="3.7058825459317584in"
 height="2.7708333333333335in"}
 
 From the partition created for each disk, create a Physical Volume (PV).
@@ -104,7 +104,7 @@ Use *pvcreate* utility to mark each of the disks as physical volumes
 *\$ sudo pvcreate /dev/sdc1 /dev/sdd1*
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\pv1.JPG](test\media\image7.jpeg){width="5.135416666666667in"
+7\\pv1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image7.jpeg){width="5.135416666666667in"
 height="0.6979166666666666in"}
 
 Run *sudo pvdisplay* to view the info about the created PVs.
