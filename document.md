@@ -388,8 +388,7 @@ This will connect to the MySQL server as the administrative database
 user root, which is inferred by the use of *sudo* when running this
 command. The output looks like this:
 
-![](test\media\image27.png){width="4.822916666666667in"
-height="1.715330271216098in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image27.png)
 
 Create a database named *tooling* and a user named *webaccess*.
 
@@ -426,8 +425,7 @@ Exit the MySQL shell with:
 
 *mysql\> exit*
 
-![](test\media\image28.png){width="6.177083333333333in"
-height="2.03125in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image28.png)
 
 Test if the new user has the proper permissions by logging in to the
 MySQL console again, this time using the custom user credentials:
@@ -442,8 +440,7 @@ console, confirm access to the *tooling* database:
 
 This will give the following output:
 
-![](test\media\image29.png){width="4.9064512248468946in"
-height="3.25in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image29.png)
 
 Exit the MySQL shell with:
 
@@ -456,8 +453,7 @@ addresses to reach the MySQL server. Allow access only to the subnet
 CIDR of the webserver(s) i.e. the subnet CIDR of the NFS-Server (all the
 VMs are created in the same subnet of the NFS-Server VM).
 
-![](test\media\image30.png){width="5.208333333333333in"
-height="3.3536986001749782in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image30.png)
 
 Next, configure the MySQL server to allow connections from remote hosts,
 in this case, the webserver(s). Edit the MySQL server configuration file
@@ -467,8 +463,7 @@ by using a text editor:
 
 Replace '127.0.0.1' with '0.0.0.0' on the bind-address line
 
-![](test\media\image31.png){width="5.002649825021872in"
-height="3.53125in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image31.png)
 
 NOTE: If you wish to access a MySQL from more than one, but less than
 all the interfaces, you should bind to 0.0.0.0 and firewall off the
@@ -483,8 +478,7 @@ Confirm the status of the MySQL server
 
 *\$sudo systemctl status mysql*
 
-![](test\media\image32.png){width="5.40625in"
-height="2.0042399387576553in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image32.png)
 
 Step 3: Prepare the Web Server(s)
 
@@ -509,8 +503,7 @@ Mount /var/www/ and target the NFS server's export for apps
 
 Verify that NFS was mounted successfully by running *df -h*.
 
-![](test\media\image33.png){width="4.645833333333333in"
-height="2.429717847769029in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image33.png)
 
 Make sure that the changes will persist on Web Server after reboot.
 
@@ -524,8 +517,7 @@ editor of choice:
 
 *\$ sudo nano /etc/fstab*
 
-![](test\media\image34.png){width="5.447916666666667in"
-height="1.745544619422572in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image34.png)
 
 Install Apache:
 
@@ -535,11 +527,9 @@ Verify that Apache files and directories are available on the Web Server
 in /var/www and also on the NFS server in /mnt/apps. If the same files
 are seen, it means NFS is mounted correctly.
 
-![](test\media\image35.png){width="3.2291666666666665in"
-height="0.3645833333333333in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image35.png)
 
-![](test\media\image36.png){width="3.3125in"
-height="0.3645833333333333in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image36.png)
 
 Locate the log folder for Apache (/var/log/httpd) on the Web Server and
 mount it to NFS server's export for logs. Also make sure that the
@@ -567,8 +557,7 @@ Run below command to list the available versions of PHP,
 
 \$ sudo dnf module list php
 
-![](test\media\image37.png){width="4.822916666666667in"
-height="1.77458552055993in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image37.png)
 
 Run the following commands to reset PHP module and install PHP 8 from
 remi-8.0 module.
@@ -590,8 +579,7 @@ command to verify PHP version:
 
 *\$ php -v*
 
-![](test\media\image38.png){width="6.010416666666667in"
-height="0.6875in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image38.png)
 
 Disable SELinux:
 
@@ -643,14 +631,12 @@ sudo bash -c \"echo hello \>\> /var/www/html/index.html\"
 Head over to a web browser and type in the IP address of the web server
 to verify.
 
-![](test\media\image39.png){width="5.625in"
-height="0.8419466316710411in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image39.png)
 
 Within the /mnt/apps/html directory of the NFS server, open the
 *functions.php* file to edit it.
 
-![](test\media\image40.png){width="5.145833333333333in"
-height="2.0693285214348207in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image40.png)
 
 Where '10.0.0.5' is the private IP address of the MySQL VM, 'webaccess'
 is the username in the MySQL server, 'Password11\#' is the password of
@@ -680,14 +666,11 @@ line 44, after the closed bracket. Edit the file and add the semicolon.
 Head over to a web browser and type in the IP address of the web server
 to view the tooling website:
 
-![](test\media\image41.png){width="5.083333333333333in"
-height="2.642681539807524in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image41.png)
 
-![](test\media\image42.png){width="4.489583333333333in"
-height="2.3877285651793527in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image42.png)
 
-![](test\media\image43.png){width="5.727711067366579in"
-height="3.2395833333333335in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image43.png)
 
 Users can be created in the database table. For example, a new admin
 user with username '*myuser'* and password '*password*' can be created
@@ -708,13 +691,12 @@ To see a list of the users in the table, run:
 
 *mysql\> select \* from users;*
 
-![](test\media\image44.png){width="3.90625in"
-height="2.5941491688538934in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image44.png)
 
 Head over to a browser and login to the tooling website using the new
 credentials:
 
-![](test\media\image45.png){width="4.380530402449693in" height="2.75in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image45.png)
 
 The above instructions are for setting up a webserver for the tooling
 app. To add subsequent webservers, just create the webservers with the
@@ -726,8 +708,7 @@ these contents will be automatically copied from the NFS-Server.
 If 'Forbidden' permission error is encountered when visiting the index
 page or the tooling website on a new webserver:
 
-![](test\media\image46.png){width="5.489583333333333in"
-height="1.90625in"}
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image46.png)
 
 The above output indicates that SELinux is also preventing access to the
 web contents in the /var/www/html directory (recall the nfs share was
