@@ -74,8 +74,7 @@ height="2.7083333333333335in"}
 Use *df -h* command to see all mounts and free space on the server
 
 ![C:\\Users\\osygroup\\Desktop\\Darey\\Project
-7\\df1.JPG](test\media\image4.jpeg){width="4.354166666666667in"
-height="2.1644991251093613in"}
+7\\df1.JPG](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image4.png)
 
 Use *gdisk* utility to create a single GPT partition on each of the 3
 disks.
