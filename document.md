@@ -52,7 +52,7 @@ Programming Language: PHP
 
 Code Repository: GitHub
 
-![](test\media\image1.png){width="4.441876640419948in"
+![](https://github.com/osygroup/Images/blob/main/Network-attached-Storage-Demo/image1.png){width="4.441876640419948in"
 height="2.9270833333333335in"}
 
 Step 1: Prepare the NFS server
