@@ -709,8 +709,8 @@ credentials:
 The above instructions are for setting up a webserver for the tooling
 app. To add subsequent webservers, just create the webservers with the
 same instructions, but skip the part of cloning the tooling website
-repository to the server and copying the html directory into /var/www/.
-/var/www/. Once the mount is successful, these contents will be automatically copied from the NFS-Server. Also skip creating an index.html page, editing the /mnt/apps/functions.php file in the NFS server and dumping the tooling-db.sql table in the MySQL server. 
+repository to the server and copying the html directory into *\/var/www/*.
+Once the mount is successful, these contents will be automatically copied from the NFS-Server. Also skip creating an index.html page, editing the *\/mnt/apps/functions.php* file in the NFS server and dumping the *\tooling-db.sql* table in the MySQL server. 
 
 If 'Forbidden' permission error is encountered when visiting the index
 page or the tooling website on a new webserver:
