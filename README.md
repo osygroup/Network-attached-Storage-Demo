@@ -668,9 +668,6 @@ database in the MySQL server:
 A user with username '*admin*' and password '*admin*' is automatically
 added to the table.
 
-Blocker: There is a missing semicolon in the *tooling-db.sql* file on
-line 44, after the closed bracket. Edit the file and add the semicolon.
-
 Head over to a web browser and type in the IP address of the web server
 to view the tooling website:
 
