@@ -605,10 +605,7 @@ Restart and enable Apache server:
 
 *\$ sudo systemctl enable httpd*
 
-Fork the tooling source code from Darey.io Github Account to a personal
-Github account:
-
-<https://github.com/darey-io/tooling>
+Fork this repository to a personal Github account.
 
 Install Git:
 
