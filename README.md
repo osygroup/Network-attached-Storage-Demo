@@ -1,4 +1,4 @@
-# Network-attached-Storage-Demo
+# Project 1: Network-attached-Storage Demo
 This project deploys a DevOps tooling website solution on web servers connected to an NFS server.
 
 Network-attached storage (NAS) is a file-level (as opposed to
